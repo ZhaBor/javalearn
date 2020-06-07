@@ -16,12 +16,37 @@ public class Main {
     final static int ADDITION = 5000;
     public static void main(String[] args) {
         System.out.println("HomeWork3");
-        Employee Tom = new Employee("Tom Crouse", "Runner", "Iphone", 500000, 48);
+        Employee Tom = new Employee(
+                "Tom Crouse",
+                "Runner",
+                "Iphone",
+                500000,
+                48);
         System.out.println("Meet with " + Tom.getName() + ", our new " + Tom.getPosition() + "!");
-        Employee Mark = new Employee("Mark Strong", "Sorter", "Nokia", 150000, 52);
-        Employee Anna = new Employee("Anna Romanova", "Imperor", "Loud Voice", 1000000, 25);
-        Employee Sasha = new Employee("Alexandra Grey", "Actress", "Pink", 100000, 33);
-        Employee Saddam = new Employee("Saddam Huseyn", "Dictator", "TAP-57", 700000, 66);
+        Employee Mark = new Employee(
+                "Mark Strong",
+                "Sorter",
+                "Nokia",
+                150000,
+                52);
+        Employee Anna = new Employee(
+                "Anna Romanova",
+                "Imperor",
+                "Loud Voice",
+                1000000,
+                25);
+        Employee Sasha = new Employee(
+                "Alexandra Grey",
+                "Actress",
+                "Pink",
+                100000,
+                33);
+        Employee Saddam = new Employee(
+                "Saddam Huseyn",
+                "Dictator",
+                "TAP-57",
+                700000,
+                66);
         Employee[] office = new Employee[]{Tom, Mark, Anna, Sasha, Saddam};
         for (int i = 0; i < office.length; i++) {
             if (office[i].getAge() > 40) {

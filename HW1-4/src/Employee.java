@@ -27,7 +27,14 @@ public class Employee {
         this.phone = phone;
         this.salary = salary;
         this.birthYear = CURRENT_YEAR-age;
-        System.out.printf("New Employee number %d %s on position %s with phone %s and salary %d was born in %d\n",this.number,this.getName(),this.getPosition(),this.getPhone(),this.getSalary(),this.birthYear);
+        System.out.printf(
+                "New Employee number %d %s on position %s with phone %s and salary %d was born in %d\n",
+                this.number,
+                this.getName(),
+                this.getPosition(),
+                this.getPhone(),
+                this.getSalary(),
+                this.birthYear);
     }
     public String getName(){
         return name;
