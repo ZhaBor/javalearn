@@ -17,17 +17,11 @@ package ru.gb.java.lesson5;
 public class Main {
     public static void main(String [] args) {
         System.out.println("Homework 1 - 5");
-        Dog d1 = new Dog(
-                "Sharik",
-                500,
-                10,
-                0.5f);
-        Cat c1 = new Cat(
-                "Barsik",
-                200,
-                0,
-                2.0f);
-        Animal[] animals={d1,c1};
+        Dog d1 = new Dog("Sharik");
+        Cat c1 = new Cat("Barsik");
+        Horse h1 = new Horse("Bolivar");
+        Bird b1 = new Bird("BlackBird");
+        Animal[] animals={d1,c1,b1,h1};
         triatlon(animals);
 
     }

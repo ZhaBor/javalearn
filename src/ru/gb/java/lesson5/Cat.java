@@ -18,17 +18,22 @@ public class Cat extends Animal {
         private int runMax;
         private float jumpMax;
         private String name;
-        Cat(String name, int runMax, int swimMax, float jumpMax) {
-            super("Cat",name,runMax,0,jumpMax);
-                    System.out.printf("New cat %s ready to run (%d m) and jump (%f m) \n",
+        private int swimMax;
+        Cat(String name) {
+            super("Cat",name,200,0,2.0f);
+                this.name=name;
+                this.runMax=super.getRunMax();
+                this.swimMax=super.getSwimMax();
+                this.jumpMax=super.getJumpMax();
+                    System.out.printf("New cat %s ready to run (%d m) and jump (%.2f m) \n",
                     this.name,
                     this.runMax,
                     this.jumpMax);
         }
 
-        @Override
-        public boolean swim(int swimLength) {
-                return false;
-        }
+       // @Override
+       // public boolean swim(int swimLength) {
+       //         return false;
+       // }
 }
 

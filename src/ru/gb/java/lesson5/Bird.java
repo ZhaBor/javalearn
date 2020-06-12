@@ -14,20 +14,21 @@
 package ru.gb.java.lesson5;
 
 public class Bird extends Animal {
-
+    private int swimMax;
     private int runMax;
     private float jumpMax;
     private String name;
-    Bird(String name, int runMax, int swimMax, float jumpMax) {
-        super("Bird",name,runMax,0,jumpMax);
-        System.out.printf("New bird %s ready to run (%d m) and jump (%f m) \n",
+    Bird(String name) {
+        super("Bird",name,5,0,0.2f);
+        this.name=name;
+        this.runMax=super.getRunMax();
+        this.swimMax=super.getSwimMax();
+        this.jumpMax=super.getJumpMax();
+        System.out.printf("New bird %s ready to run (%d m) and jump (%.2f m) \n",
                 this.name,
                 this.runMax,
                 this.jumpMax);
     }
 
-    @Override
-    public boolean swim(int swimLength) {
-        return false;
-    }
+
 }

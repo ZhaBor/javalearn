@@ -14,6 +14,8 @@
 
 package ru.gb.java.lesson5;
 
+
+
 public abstract class Animal {
     protected String type;
     protected String name;
@@ -21,17 +23,22 @@ public abstract class Animal {
     private int swimMax;
     private float jumpMax;
 
+
     Animal(String type, String name, int runMax, int swimMax, float jumpMax) {
         this.type = type;
         this.name = name;
-        this.runMax = runMax;
-        this.swimMax = swimMax;
-        this.jumpMax = jumpMax;
+        this.runMax = (int)(runMax*0.8+(Math.random()*runMax*0.4));
+        this.swimMax = (int)(swimMax*0.8+(Math.random()*swimMax*0.4));
+        this.jumpMax =(float)(jumpMax*0.8+(Math.random()*jumpMax*0.4));
     }
 
     public String getName() {
         return name;
     }
+
+    public int getRunMax() {return runMax;}
+    public int getSwimMax() {return swimMax;}
+    public float getJumpMax() {return jumpMax;}
 
     public boolean run(int runLength) {
         if (runLength<=runMax) {
