@@ -19,10 +19,8 @@ public class Cat extends Animal {
         private float jumpMax;
         private String name;
         Cat(String name, int runMax, int swimMax, float jumpMax) {
-            this.name = name;
-            this.runMax=runMax;
-            this.jumpMax=jumpMax;
-            System.out.printf("New cat %s ready to run (%d m) and jump (%f m) \n",
+            super("Cat",name,runMax,0,jumpMax);
+                    System.out.printf("New cat %s ready to run (%d m) and jump (%f m) \n",
                     this.name,
                     this.runMax,
                     this.jumpMax);

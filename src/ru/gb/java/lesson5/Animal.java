@@ -15,10 +15,19 @@
 package ru.gb.java.lesson5;
 
 public abstract class Animal {
+    protected String type;
     protected String name;
     private int runMax;
     private int swimMax;
     private float jumpMax;
+
+    Animal(String type, String name, int runMax, int swimMax, float jumpMax) {
+        this.type = type;
+        this.name = name;
+        this.runMax = runMax;
+        this.swimMax = swimMax;
+        this.jumpMax = jumpMax;
+    }
 
     public String getName() {
         return name;

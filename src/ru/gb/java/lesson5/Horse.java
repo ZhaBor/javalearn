@@ -19,10 +19,7 @@ public class Horse extends Animal {
     private float jumpMax;
     private String name;
     Horse(String name, int runMax, int swimMax, float jumpMax) {
-        this.name = name;
-        this.runMax=runMax;
-        this.swimMax=swimMax;
-        this.jumpMax=jumpMax;
+        super("Horse",name,runMax,swimMax,jumpMax);
         System.out.printf("New horse %s ready to run (%d m), swim (%d m) and jump (%f m) \n",
                 this.name,
                 this.runMax,

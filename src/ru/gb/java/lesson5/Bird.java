@@ -19,9 +19,7 @@ public class Bird extends Animal {
     private float jumpMax;
     private String name;
     Bird(String name, int runMax, int swimMax, float jumpMax) {
-        this.name = name;
-        this.runMax=runMax;
-        this.jumpMax=jumpMax;
+        super("Bird",name,runMax,0,jumpMax);
         System.out.printf("New bird %s ready to run (%d m) and jump (%f m) \n",
                 this.name,
                 this.runMax,

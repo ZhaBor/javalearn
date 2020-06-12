@@ -28,15 +28,28 @@ public class Main {
                 0,
                 2.0f);
         triatlon(d1);
+        triatlon(c1);
     }
 
 
-    public static void triatlon(Dog a) {
+    public static void triatlon(Animal a) {
         int runLength=250;
+        int swimLength=8;
+        float jumpHeight=0.8f;
         if(a.run(runLength)){
-            System.out.println("Animal "+a.getName()+" seccesfully ran "+runLength+" m");
+            System.out.println(a.type+" "+a.getName()+" succesfully ran "+runLength+" m");
         } else {
-            System.out.println("Animal "+a.getName()+" failed to run " +runLength+ " m");
+            System.out.println(a.type+" "+a.getName()+" failed to run " +runLength+ " m");
+        }
+        if(a.jump(jumpHeight)){
+            System.out.println(a.type+" "+a.getName()+" succesfully jumped "+jumpHeight+" m");
+        } else {
+            System.out.println(a.type+" "+a.getName()+" failed to jump " +jumpHeight+ " m");
+        }
+        if(a.swim(swimLength)){
+            System.out.println(a.type+" "+a.getName()+" succesfully swimmed "+swimLength+" m");
+        } else {
+            System.out.println(a.type+" "+a.getName()+" failed to swim " +swimLength+ " m");
         }
     }
 }
