@@ -27,29 +27,32 @@ public class Main {
                 200,
                 0,
                 2.0f);
-        triatlon(d1);
-        triatlon(c1);
+        Animal[] animals={d1,c1};
+        triatlon(animals);
+
     }
 
 
-    public static void triatlon(Animal a) {
-        int runLength=250;
-        int swimLength=8;
-        float jumpHeight=0.8f;
-        if(a.run(runLength)){
-            System.out.println(a.type+" "+a.getName()+" succesfully ran "+runLength+" m");
-        } else {
-            System.out.println(a.type+" "+a.getName()+" failed to run " +runLength+ " m");
-        }
-        if(a.jump(jumpHeight)){
-            System.out.println(a.type+" "+a.getName()+" succesfully jumped "+jumpHeight+" m");
-        } else {
-            System.out.println(a.type+" "+a.getName()+" failed to jump " +jumpHeight+ " m");
-        }
-        if(a.swim(swimLength)){
-            System.out.println(a.type+" "+a.getName()+" succesfully swimmed "+swimLength+" m");
-        } else {
-            System.out.println(a.type+" "+a.getName()+" failed to swim " +swimLength+ " m");
+    public static void triatlon(Animal[] arr) {
+        for (int i=0;i<arr.length;i++) {
+            int runLength = 250;
+            int swimLength = 8;
+            float jumpHeight = 0.8f;
+            if (arr[i].run(runLength)) {
+                System.out.println(arr[i].type + " " + arr[i].getName() + " succesfully ran " + runLength + " m");
+            } else {
+                System.out.println(arr[i].type + " " + arr[i].getName() + " failed to run " + runLength + " m");
+            }
+            if (arr[i].jump(jumpHeight)) {
+                System.out.println(arr[i].type + " " + arr[i].getName() + " succesfully jumped " + jumpHeight + " m");
+            } else {
+                System.out.println(arr[i].type + " " + arr[i].getName() + " failed to jump " + jumpHeight + " m");
+            }
+            if (arr[i].swim(swimLength)) {
+                System.out.println(arr[i].type + " " + arr[i].getName() + " succesfully swimmed " + swimLength + " m");
+            } else {
+                System.out.println(arr[i].type + " " + arr[i].getName() + " failed to swim " + swimLength + " m");
+            }
         }
     }
 }
